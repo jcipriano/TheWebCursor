@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+body {
+  background: #e15e4e;
+	background-image: url('../images/background.gif');
+	background-size: 1250px 600px;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+#main {
+	padding: 20px 0 0 0;
+	text-align: center;
+}
+
+#title-container {
+	posittion: relative;
+	margin: 0 auto 0 auto;
+	background: url('../images/title.png');
+	background-size: 401px 195px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 401px;
+	height: 195px;
+	overflow: hidden;
+
+	h1 {
+		position: absolute;
+		top: -100px;
+		left: 0;
+	}
+}
+
+#face-container {
+	margin: 0 auto 0 auto;
+	width: 225px;
+	height: 275px;
+	background: url('../images/face-states.png');
+	background-repeat: no-repeat;
+	background-size: 675px 275px;
+	cursor: pointer;
+}
+
+#face-container:hover {
+	background-position: -225px 0;
+}
+
+#face-container.mousedown {
+	background-position: -450px 0;
+}
+
+#sub-container {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background: url('../images/sub-bg.png');
+	overflow: hidden;
+
+	#sub-text {
+		position: relative;
+		top: 12px;
+		margin: 0 auto 0 auto;
+		height: 35px;
+		width: 727px;
+		background: url('../images/sub-text.png');
+		background-size: 727px 35px;
+	}
+
+	p {
+		position: absolute;
+		top: -100px;
+		left: 0;
+	}
+}
+
+#links-container {
+	margin: 20px 0 0 0;
+
+	#link-btns {
+		position: relative;
+		margin: 0 auto 0 auto;
+		width: 290px;
+		height: 150px;
+
+		#chrome-link {
+			left: 70px;
+			background: url('../images/btn-chrome.png');
+			background-size: 145px 57px;
+		}
+		
+		#chrome-link:hover {
+			background: url('../images/btn-chrome-over.png');
+			background-size: 145px 57px;
+		}
+
+		#bookmarklet-link {
+			right: 0;
+			background: url('../images/btn-bookmarklet.png');
+			background-size: 145px 57px;
+			img {
+				display: none;
+			}
+		}
+
+		#bookmarklet-link:hover {
+			background: url('../images/btn-bookmarklet-over.png');
+			background-size: 145px 57px;
+			img {
+				display: block;
+			}
+		}
+
+		.link-btn {
+			position: absolute;
+			width: 145px;
+			height: 57px;
+			cursor: pointer;
+			
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.social-btn {
+			position: absolute;
+			top: 65px;
+			width: 43px;
+			height: 43px;
+			cursor: pointer;
+		}
+
+		#facebook-btn {
+			left: 95px;
+		}
+
+		#twitter-btn {
+			right: 95px;
+		}
+	}
+}
