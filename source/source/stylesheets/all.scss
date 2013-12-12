@@ -91,10 +91,40 @@ body {
 		width: 290px;
 		height: 150px;
 
+		.link-btn {
+			position: absolute;
+			width: 145px;
+			height: 57px;
+			cursor: pointer;
+			
+			img.click-target {
+				width: 100%;
+				height: 100%;
+			}
+
+			img.tooltip {
+				position: absolute;
+				top: 15px;
+				width: 120px;
+				height: 27px;
+				display: none;
+			}
+		}
+
+		.link-btn:hover {
+			img.tooltip {
+				display: block;
+			}
+		}
+
 		#chrome-link {
 			left: 0px;
 			background: url('../images/btn-chrome.png');
 			background-size: 145px 57px;
+
+			img.tooltip {
+				left: -120px;
+			}
 		}
 		
 		#chrome-link:hover {
@@ -106,28 +136,22 @@ body {
 			right: 0;
 			background: url('../images/btn-bookmarklet.png');
 			background-size: 145px 57px;
-			img {
+			
+			img.click-target {
 				display: none;
+			}
+
+			img.tooltip {
+				right: -120px;
 			}
 		}
 
 		#bookmarklet-link:hover {
 			background: url('../images/btn-bookmarklet-over.png');
 			background-size: 145px 57px;
-			img {
-				display: block;
-			}
-		}
-
-		.link-btn {
-			position: absolute;
-			width: 145px;
-			height: 57px;
-			cursor: pointer;
 			
-			img {
-				width: 100%;
-				height: 100%;
+			img.click-target {
+				display: block;
 			}
 		}
 
