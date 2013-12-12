@@ -15,7 +15,7 @@
   // Initializes UI
   cc.init = function() {
 
-    if(chrome){
+    if(chrome.storage){
       chrome.storage.local.get('firstUse', function(obj) {
         if(!obj.firstUse) {
           chrome.storage.local.set({'firstUse': true}, function() { });
@@ -43,13 +43,13 @@
     // css
     var styleTag = document.createElement('link');                                      
     styleTag.setAttribute('rel', 'stylesheet');
-    styleTag.setAttribute('href', '//thewebcursor.herokuapp.com/extension/ChromeExt/stylesheets/main.css');  
+    styleTag.setAttribute('href', '//thewebcursor.herokuapp.com/ChromeExt/stylesheets/main.css');  
     document.body.appendChild(styleTag);  
 
     // tweenlite javascrtipt
     if(!TweenLite) {
       var scriptTag = document.createElement('script');
-      scriptTag.setAttribute('src', '//thewebcursor.herokuapp.com/extension/ChromeExt/javascripts/libs/tweenlite-min.js');
+      scriptTag.setAttribute('src', '//thewebcursor.herokuapp.com/ChromeExt/javascripts/libs/tweenlite-min.js');
       document.body.appendChild(scriptTag);
     }
 
@@ -59,7 +59,7 @@
   cc.loadComplete = function() {
 
     document.onclick = function(e) {
-      if(chrome){
+      if(chrome.storage){
         chrome.storage.local.get('cursingEnabled', function(obj) {
           console.log('cursingEnabled', obj.cursingEnabled);
           if(obj.cursingEnabled) {
@@ -94,7 +94,7 @@
       }});
     }});
 
-    if(chrome) {
+    if(chrome.storage) {
       chrome.storage.local.get('totalCurses', function(obj) {
         console.log(obj);
         obj.totalCurses = obj.totalCurses ? obj.totalCurses : 0;
@@ -108,7 +108,7 @@
     var id = Math.floor(Math.random() * cc.config.cursePoolTotal),
     url = 'images/curse_' + id + '.png';
     
-    if(chrome) {
+    if(chrome.storage) {
       url = chrome.extension.getURL(url);
     } else {
       url = '//thewebcursor.herokuapp.com/extension/ChromeExt/images/' + url;
