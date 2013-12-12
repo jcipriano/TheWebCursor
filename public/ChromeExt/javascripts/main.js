@@ -22,16 +22,14 @@
           chrome.storage.local.set({'cursingEnabled': true}, function() {
             cc.initComplete();
           });
-
-          return;
+        } else{
+          cc.initComplete();
         }
 
-        cc.initComplete();
-        return;
       });
+    } else {
+      cc.insertScriptsAndCSS();
     }
-
-    cc.insertScriptsAndCSS();
   };
 
   cc.initComplete = function() {
@@ -47,7 +45,7 @@
     document.body.appendChild(styleTag);  
 
     // tweenlite javascrtipt
-    if(!TweenLite) {
+    if(typeof TweenLite === 'undefined') {
       var scriptTag = document.createElement('script');
       scriptTag.setAttribute('src', '//thewebcursor.herokuapp.com/ChromeExt/javascripts/libs/tweenlite-min.js');
       document.body.appendChild(scriptTag);
