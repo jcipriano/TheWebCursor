@@ -9,13 +9,18 @@
   var cc = {};
 
   cc.config = {
-    cursePoolTotal: 10
+    cursePoolTotal: 10,
+    hostedUrl: '//thewebcursor.herokuapp.com/ChromeExt/',
+    imagePath: 'images/curse_{{id}}.png',
+    isChromeExt: chrome && chrome.storage
   };
+  
 
   // Initializes UI
   cc.init = function() {
+    console.log('TheCursor:', 'Init.');
 
-    if(!cc.isBookmarklet){
+    if(cc.config.isChromeExt){
       chrome.storage.local.get('firstUse', function(obj) {
         if(!obj.firstUse) {
           chrome.storage.local.set({'firstUse': true}, function() { });
@@ -37,7 +42,8 @@
   };
 
   cc.insertScriptsAndCSS = function() {
-    
+    console.log('TheCursor:', 'Insering remote css and js.');
+
     // css
     var styleTag = document.createElement('link');                                      
     styleTag.setAttribute('rel', 'stylesheet');
@@ -51,13 +57,32 @@
       document.body.appendChild(scriptTag);
     }
 
+    cc.loadImages();
     cc.initComplete();
   };
+
+  cc.loadImages = function() {
+    console.log('TheCursor:', 'Loading images.');
+
+    var html = '',
+    url,
+    i = 0,
+    len = cc.config.cursePoolTotal;
+
+    for(i; i<len; i++) {
+      url = cc.config.hostedUrl + cc.config.imagePath.replace('{{id}}', i);
+      html = html + '<img src="' + url + '" />';
+    }
+
+    var divTag = document.createElement('div');                                   
+    divTag.setAttribute('id', 'cc-image-load');
+    document.body.appendChild(divTag);  
+  }
 
   cc.loadComplete = function() {
 
     document.onclick = function(e) {
-      if(!cc.isBookmarklet){
+      if(cc.config.isChromeExt){
         chrome.storage.local.get('cursingEnabled', function(obj) {
           console.log('cursingEnabled', obj.cursingEnabled);
           if(obj.cursingEnabled) {
@@ -92,7 +117,7 @@
       }});
     }});
 
-    if(!cc.isBookmarklet) {
+    if(cc.config.isChromeExt) {
       chrome.storage.local.get('totalCurses', function(obj) {
         console.log(obj);
         obj.totalCurses = obj.totalCurses ? obj.totalCurses : 0;
@@ -104,19 +129,15 @@
   cc.getRandomCurse = function() {
 
     var id = Math.floor(Math.random() * cc.config.cursePoolTotal),
-    url = 'images/curse_' + id + '.png';
+    url = cc.config.imagePath.replace('{{id}}', id);
     
     if(!cc.isBookmarklet) {
       url = chrome.extension.getURL(url);
     } else {
-      url = '//thewebcursor.herokuapp.com/ChromeExt/' + url;
+      url = cc.config.hostedUrl + url;
     }
     
     return url;
-  };
-
-  cc.isBookmarklet = function() {
-    return chrome && chrome.storage;
   };
 
   cc.addCurseToDom = function(data) {

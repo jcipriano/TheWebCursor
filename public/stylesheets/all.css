@@ -87,49 +87,65 @@ body {
     width: 290px;
     height: 150px; }
     /* line 94, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-    #links-container #link-btns #chrome-link {
-      left: 0px;
-      background: url("../images/btn-chrome.png");
-      background-size: 145px 57px; }
-    /* line 100, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-    #links-container #link-btns #chrome-link:hover {
-      background: url("../images/btn-chrome-over.png");
-      background-size: 145px 57px; }
-    /* line 105, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-    #links-container #link-btns #bookmarklet-link {
-      right: 0;
-      background: url("../images/btn-bookmarklet.png");
-      background-size: 145px 57px; }
-      /* line 109, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-      #links-container #link-btns #bookmarklet-link img {
-        display: none; }
-    /* line 114, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-    #links-container #link-btns #bookmarklet-link:hover {
-      background: url("../images/btn-bookmarklet-over.png");
-      background-size: 145px 57px; }
-      /* line 117, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-      #links-container #link-btns #bookmarklet-link:hover img {
-        display: block; }
-    /* line 122, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns .link-btn {
       position: absolute;
       width: 145px;
       height: 57px;
       cursor: pointer; }
-      /* line 128, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
-      #links-container #link-btns .link-btn img {
+      /* line 100, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      #links-container #link-btns .link-btn img.click-target {
         width: 100%;
         height: 100%; }
-    /* line 134, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      /* line 105, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      #links-container #link-btns .link-btn img.tooltip {
+        position: absolute;
+        top: 15px;
+        width: 120px;
+        height: 27px;
+        display: none; }
+    /* line 115, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    #links-container #link-btns .link-btn:hover img.tooltip {
+      display: block; }
+    /* line 120, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    #links-container #link-btns #chrome-link {
+      left: 0px;
+      background: url("../images/btn-chrome.png");
+      background-size: 145px 57px; }
+      /* line 125, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      #links-container #link-btns #chrome-link img.tooltip {
+        left: -120px; }
+    /* line 130, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    #links-container #link-btns #chrome-link:hover {
+      background: url("../images/btn-chrome-over.png");
+      background-size: 145px 57px; }
+    /* line 135, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    #links-container #link-btns #bookmarklet-link {
+      right: 0;
+      background: url("../images/btn-bookmarklet.png");
+      background-size: 145px 57px; }
+      /* line 140, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      #links-container #link-btns #bookmarklet-link img.click-target {
+        display: none; }
+      /* line 144, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      #links-container #link-btns #bookmarklet-link img.tooltip {
+        right: -120px; }
+    /* line 149, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    #links-container #link-btns #bookmarklet-link:hover {
+      background: url("../images/btn-bookmarklet-over.png");
+      background-size: 145px 57px; }
+      /* line 153, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      #links-container #link-btns #bookmarklet-link:hover img.click-target {
+        display: block; }
+    /* line 158, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns .social-btn {
       position: absolute;
       top: 65px;
       width: 43px;
       height: 43px;
       cursor: pointer; }
-    /* line 142, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 166, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #facebook-btn {
       left: 95px; }
-    /* line 146, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 170, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #twitter-btn {
       right: 95px; }

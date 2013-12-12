@@ -10,3 +10,10 @@
   width: 225px;
   height: 225px;
 }
+
+#cc-image-load {
+  position:absolute;
+  top: -500px;
+  left: -500px;
+  display: none;
+}
