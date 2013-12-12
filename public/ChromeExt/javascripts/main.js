@@ -109,7 +109,7 @@
     if(chrome.storage) {
       url = chrome.extension.getURL(url);
     } else {
-      url = '//thewebcursor.herokuapp.com/extension/ChromeExt/images/' + url;
+      url = '//thewebcursor.herokuapp.com/ChromeExt/' + url;
     }
     
     return url;
