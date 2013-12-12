@@ -131,7 +131,7 @@
     var id = Math.floor(Math.random() * cc.config.cursePoolTotal),
     url = cc.config.imagePath.replace('{{id}}', id);
     
-    if(!cc.isBookmarklet) {
+    if(cc.config.isChromeExt) {
       url = chrome.extension.getURL(url);
     } else {
       url = cc.config.hostedUrl + url;
