@@ -73,7 +73,7 @@
       url = cc.config.hostedUrl + cc.config.imagePath.replace('{{id}}', i);
       html = html + '<img src="' + url + '" />';
     }
-
+    console.log(html);
     var divTag = document.createElement('div');                                   
     divTag.setAttribute('id', 'cc-image-load');
     divTag.innerHTML = html;
