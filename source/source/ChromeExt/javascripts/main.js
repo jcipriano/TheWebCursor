@@ -76,6 +76,7 @@
 
     var divTag = document.createElement('div');                                   
     divTag.setAttribute('id', 'cc-image-load');
+    divTag.innerHTML = html;
     document.body.appendChild(divTag);  
   }
 
