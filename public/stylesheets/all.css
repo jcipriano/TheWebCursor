@@ -15,13 +15,13 @@ body {
 /* line 16, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
 #title-container {
   posittion: relative;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 40px auto;
   background: url("../images/title.png");
-  background-size: 401px 195px;
+  background-size: 527px 161px;
   background-position: center;
   background-repeat: no-repeat;
-  width: 401px;
-  height: 195px;
+  width: 527px;
+  height: 161px;
   overflow: hidden; }
   /* line 27, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
   #title-container h1 {
@@ -31,6 +31,7 @@ body {
 
 /* line 34, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
 #face-container {
+  position: relative;
   margin: 0 auto 0 auto;
   width: 225px;
   height: 275px;
@@ -38,23 +39,30 @@ body {
   background-repeat: no-repeat;
   background-size: 675px 275px;
   cursor: pointer; }
+  /* line 44, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+  #face-container img.sub-text {
+    width: 325px;
+    height: 241px;
+    position: absolute;
+    left: -55px;
+    top: -10px; }
 
-/* line 44, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+/* line 53, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
 #face-container:hover {
   background-position: -225px 0; }
 
-/* line 48, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+/* line 57, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
 #face-container.mousedown {
   background-position: -450px 0; }
 
-/* line 52, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+/* line 61, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
 #sub-container {
   position: relative;
   width: 100%;
   height: 60px;
   background: url("../images/sub-bg.png");
   overflow: hidden; }
-  /* line 59, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+  /* line 68, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
   #sub-container #sub-text {
     position: relative;
     top: 12px;
@@ -63,65 +71,65 @@ body {
     width: 727px;
     background: url("../images/sub-text.png");
     background-size: 727px 35px; }
-  /* line 69, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+  /* line 78, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
   #sub-container p {
     position: absolute;
     top: -100px;
     left: 0; }
 
-/* line 76, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+/* line 85, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
 #links-container {
   margin: 20px 0 0 0; }
-  /* line 79, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+  /* line 88, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
   #links-container #link-btns {
     position: relative;
     margin: 0 auto 0 auto;
     width: 290px;
     height: 150px; }
-    /* line 85, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 94, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #chrome-link {
       left: 70px;
       background: url("../images/btn-chrome.png");
       background-size: 145px 57px; }
-    /* line 91, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 100, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #chrome-link:hover {
       background: url("../images/btn-chrome-over.png");
       background-size: 145px 57px; }
-    /* line 96, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 105, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #bookmarklet-link {
       right: 0;
       background: url("../images/btn-bookmarklet.png");
       background-size: 145px 57px; }
-      /* line 100, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      /* line 109, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
       #links-container #link-btns #bookmarklet-link img {
         display: none; }
-    /* line 105, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 114, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #bookmarklet-link:hover {
       background: url("../images/btn-bookmarklet-over.png");
       background-size: 145px 57px; }
-      /* line 108, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      /* line 117, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
       #links-container #link-btns #bookmarklet-link:hover img {
         display: block; }
-    /* line 113, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 122, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns .link-btn {
       position: absolute;
       width: 145px;
       height: 57px;
       cursor: pointer; }
-      /* line 119, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+      /* line 128, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
       #links-container #link-btns .link-btn img {
         width: 100%;
         height: 100%; }
-    /* line 125, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 134, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns .social-btn {
       position: absolute;
       top: 65px;
       width: 43px;
       height: 43px;
       cursor: pointer; }
-    /* line 133, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 142, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #facebook-btn {
       left: 95px; }
-    /* line 137, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
+    /* line 146, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #twitter-btn {
       right: 95px; }
