@@ -1,0 +1,33 @@
+{
+  "name": "The Cursing Cursor",
+  "version": "0.8",
+  "manifest_version": 2,
+  "description": "The first extension that I made.",
+
+	"browser_action": {
+		"default_popup": "views/menu.html",
+		"default_icon": "images/38x38_Icon.png",
+    "default_title": "The Cursing Cursor"
+	},
+	
+  "icons": {                    
+    "16": "images/16x16_Icon.png",           
+    "48": "images/48x48_Icon.png",           
+    "128": "images/128x128_Icon.png"             
+  },
+
+	"content_scripts": [{
+			"matches": ["<all_urls>"],
+			"css": ["stylesheets/main.css"],
+			"js": [
+					"javascripts/libs/tweenlite-min.js",
+					"javascripts/main.js"
+				]
+			}],
+  
+	"web_accessible_resources": ["images/*.png", "views/curse.html", "javascripts/menu.js", "stylesheets/menu.css"],
+	
+	"permissions": [
+    "storage"
+  ]
+}

@@ -1,0 +1,10 @@
+body {
+  font-family: helvetica, arial, verdana;
+  font-size: 12px;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 14px;
+}
