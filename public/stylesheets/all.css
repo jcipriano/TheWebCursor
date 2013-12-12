@@ -88,7 +88,7 @@ body {
     height: 150px; }
     /* line 94, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #chrome-link {
-      left: 70px;
+      left: 0px;
       background: url("../images/btn-chrome.png");
       background-size: 145px 57px; }
     /* line 100, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */

@@ -15,7 +15,7 @@
   // Initializes UI
   cc.init = function() {
 
-    if(chrome.storage){
+    if(!cc.isBookmarklet){
       chrome.storage.local.get('firstUse', function(obj) {
         if(!obj.firstUse) {
           chrome.storage.local.set({'firstUse': true}, function() { });
@@ -57,7 +57,7 @@
   cc.loadComplete = function() {
 
     document.onclick = function(e) {
-      if(chrome.storage){
+      if(!cc.isBookmarklet){
         chrome.storage.local.get('cursingEnabled', function(obj) {
           console.log('cursingEnabled', obj.cursingEnabled);
           if(obj.cursingEnabled) {
@@ -92,7 +92,7 @@
       }});
     }});
 
-    if(chrome.storage) {
+    if(!cc.isBookmarklet) {
       chrome.storage.local.get('totalCurses', function(obj) {
         console.log(obj);
         obj.totalCurses = obj.totalCurses ? obj.totalCurses : 0;
@@ -106,13 +106,17 @@
     var id = Math.floor(Math.random() * cc.config.cursePoolTotal),
     url = 'images/curse_' + id + '.png';
     
-    if(chrome.storage) {
+    if(!cc.isBookmarklet) {
       url = chrome.extension.getURL(url);
     } else {
       url = '//thewebcursor.herokuapp.com/ChromeExt/' + url;
     }
     
     return url;
+  };
+
+  cc.isBookmarklet = function() {
+    return chrome && chrome.storage;
   };
 
   cc.addCurseToDom = function(data) {
