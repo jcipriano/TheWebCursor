@@ -1,7 +1,7 @@
 (function() {
   
   if (document.WebCursorInit || document.URL.indexOf('www.thecurser.com') > -1 || document.URL.indexOf('localhost') > -1 ) {
-    return;
+    //return;
   };
 
   document.WebCursorInit = true;
@@ -34,6 +34,25 @@
       });
     } else {
       cc.insertScriptsAndCSS();
+    }
+
+    cc.setCursor();
+  };
+
+  cc.setCursor = function() {
+    var url = 'images/cursor.png';
+    
+    if(cc.config.isChromeExt){
+      url = chrome.extension.getURL(url);
+    } else {
+      url = cc.config.hostedUrl + url;
+    }
+    
+    var i = 0, len, els;
+    els = window.top.document.querySelectorAll('a');
+    len = els.length;
+    for(i; i<len; i++) {
+      els[i].setAttribute("style", "cursor: url('" + url + "'), pointer");
     }
   };
 
@@ -73,7 +92,7 @@
       url = cc.config.hostedUrl + cc.config.imagePath.replace('{{id}}', i);
       html = html + '<img src="' + url + '" />';
     }
-    console.log(html);
+
     var divTag = document.createElement('div');                                   
     divTag.setAttribute('id', 'cc-image-load');
     divTag.innerHTML = html;
