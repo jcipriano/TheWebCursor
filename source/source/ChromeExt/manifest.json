@@ -1,8 +1,9 @@
 {
-  "name": "The Cursing Cursor",
-  "version": "0.8",
+  "name": "The Curser",
+  "short_name": "The Curser",
+  "version": "0.9.1",
   "manifest_version": 2,
-  "description": "The first extension that I made.",
+  "description": "Curse your frustrations away this holiday with the most foul mouthed browsing tool on the internet.",
 
 	"browser_action": {
 		"default_popup": "views/menu.html",

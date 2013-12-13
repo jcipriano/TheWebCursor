@@ -40,14 +40,17 @@
 		if(!$el){$el = $('body');}
 
 		$('.social.pinterest', $el).click(function (e) {
+			var data = $(this).data();
 			Social.pinterest(data.url, data.media, data.description);
 		});
 
 		$('.social.twitter', $el).click(function (e) {
+			var data = $(this).data();
 			Social.twitter(data.text, data.url);
 		});
 
 		$('.social.fb', $el).click(function (e) {
+			var data = $(this).data();
 			Social.facebook(data.url);
 		});
 
