@@ -17,3 +17,7 @@
   left: -500px;
   display: none;
 }
+
+a {
+  cursor: url('../images/cursor.png'), pointer;
+}

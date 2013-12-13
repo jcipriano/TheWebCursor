@@ -1,6 +1,6 @@
 (function() {
   
-  if (document.WebCursorInit && !document.WebCursorSite) {
+  if (document.WebCursorInit || document.URL.indexOf('www.thecurser.com') > -1 || document.URL.indexOf('localhost') > -1 ) {
     return;
   };
 

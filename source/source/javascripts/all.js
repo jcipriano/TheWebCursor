@@ -1,6 +1,8 @@
-$(function(){
 
-	document.WebCursorSite = true;
+
+document.WebCursorSite = true;
+
+$(function(){
 
 	Social.init();
 
