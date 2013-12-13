@@ -25,10 +25,11 @@
 	/**
 	 * FACEBOOK
 	 **/
-	var FACEBOOK_URL = "https://www.facebook.com/sharer/sharer.php?u={{url}}";
+	//var FACEBOOK_URL = "https://www.facebook.com/sharer/sharer.php?p[url]={{url}}&p[images][0]={{image}}";
+	var FACEBOOK_URL = "http://www.facebook.com/sharer.php?s=100&p[title]={{title}}&p[url]={{url}}&p[summary]={{text}}&p[images][0]={{image}}";
 
-	Social.facebook = function (url) {
-		var url = FACEBOOK_URL.replace('{{url}}', encodeURIComponent(url));
+	Social.facebook = function (data) {
+		var url = FACEBOOK_URL.replace('{{url}}', encodeURIComponent(data.url)).replace('{{image}}', encodeURIComponent(data.image)).replace('{{title}}', encodeURIComponent(data.title)).replace('{{text}}', encodeURIComponent(data.text));
 		window.open( url, 'newWindow', 'height=335,width=550,scrollbars=0,resizable=0'); 
 	};
 
@@ -51,7 +52,7 @@
 
 		$('.social.fb', $el).click(function (e) {
 			var data = $(this).data();
-			Social.facebook(data.url);
+			Social.facebook(data);
 		});
 
 	};
