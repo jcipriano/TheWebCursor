@@ -1,6 +1,6 @@
 (function() {
   
-  if (document.WebCursorInit) {
+  if (document.WebCursorInit && !document.WebCursorSite) {
     return;
   };
 
@@ -155,6 +155,13 @@
     return el;
   };
 
-  cc.init();
+  // initialize
+  if(cc.config.isChromeExt) {
+    cc.init();
+  } else {
+    window.onload = function() {
+      cc.init();
+    };
+  }
 
 })();

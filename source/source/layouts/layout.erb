@@ -15,8 +15,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
     
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", "social", "all" %>
+    <%= stylesheet_link_tag "normalize", "all", "ChromeExt/stylesheets/main.css" %>
+    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", "social", "all", "ChromeExt/javascripts/libs/tweenlite-min.js", "ChromeExt/javascripts/main.js" %>
   </head>
   
   <body class="<%= page_classes %>">

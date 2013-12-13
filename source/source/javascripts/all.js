@@ -1,10 +1,13 @@
 $(function(){
 
+	document.WebCursorSite = true;
+
 	Social.init();
 
 	var face = $('#face-container');
+	var mouth = $('#mouth');
 
-	face.click(function() {
+	mouth.click(function() {
 		face.addClass('mousedown');
 		setTimeout(function() {
 			face.removeClass('mousedown');
