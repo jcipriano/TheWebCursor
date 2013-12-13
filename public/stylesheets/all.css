@@ -150,7 +150,7 @@ body {
       top: 65px;
       width: 43px;
       height: 43px;
-      cursor: pointer; }
+      cursor: url("../ChromeExt/images/cursor.png"), pointer; }
     /* line 175, /Users/jonathan.cipriano/Documents/_git/personal/TheWebCursor/source/source/stylesheets/all.scss */
     #links-container #link-btns #facebook-btn {
       left: 95px; }
