@@ -1,10 +1,4 @@
 (function() {
-  
-  if (document.WebCursorInit || document.URL.indexOf('www.thecurser.com') > -1 || document.URL.indexOf('localhost') > -1 ) {
-    return;
-  };
-
-  document.WebCursorInit = true;
 
   var cc = {};
 
@@ -15,6 +9,17 @@
     isChromeExt: chrome && chrome.storage
   };
   
+  // don't run twice
+  if (document.WebCursorInit) {
+    return;
+  };
+
+  // don't run extensions on the website
+  if ( (document.URL.indexOf('www.thecurser.com') > -1 || document.URL.indexOf('localhost') > -1) && cc.config.isChromeExt) {
+    return;
+  }
+
+  document.WebCursorInit = true;
 
   // Initializes UI
   cc.init = function() {
